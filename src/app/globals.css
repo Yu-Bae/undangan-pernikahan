@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF6F0;
+  --color-ivory-light: #FAF8F5;
+  --color-ivory-dark: #F0E8DD;
+  
+  --color-warm-white: #FFFFFF;
+  
+  --color-soft-brown: #7A5230;
+  --color-soft-brown-light: #9C7453;
+  --color-soft-brown-dark: #3D2B1F;
+  --color-soft-brown-muted: #8C7361;
+
+  --color-gold: #C5A059;
+  --color-gold-light: #E5C88B;
+  --color-gold-dark: #9A7733;
+
+  --color-crimson: #7A0C0C;
+  --color-crimson-light: #A31919;
+  --color-crimson-dark: #4A0505;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-script: var(--font-script), cursive;
+  --font-sans: var(--font-sans), sans-serif;
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #B8860B 0%, #E6CA65 50%, #9A7733 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-soft-brown-dark);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

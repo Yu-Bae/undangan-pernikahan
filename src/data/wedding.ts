@@ -16,7 +16,7 @@ export const weddingData: WeddingData = {
       parents: "Putri dari Bapak Nama Ayah dan Ibu Nama Ibu",
       instagram: "@kentifeoni8",
       instagramUrl: "https://instagram.com/kentifeoni8",
-      image: "/images/bride.jpg",
+      image: "/images/bride.png",
     },
   },
   eventDate: {

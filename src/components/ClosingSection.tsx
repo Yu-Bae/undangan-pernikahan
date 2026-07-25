@@ -30,7 +30,7 @@ export const ClosingSection: React.FC = () => {
       {/* Footer */}
       <footer className="mt-20 pt-8 border-t border-[#C5A059]/20 text-center pb-24 md:pb-8">
         <p className="font-sans text-xs text-[#8C7361] flex items-center justify-center gap-1">
-          Made with love for <span className="font-serif font-bold text-[#3D2B1F]">{weddingData.couple.groom.name} & {weddingData.couple.bride.name}</span> © 2026
+          Made with love for <span className="font-serif font-bold text-[#3D2B1F]">{weddingData.couple.groom.name} & {weddingData.couple.bride.name}</span> © 2028
         </p>
       </footer>
     </section>

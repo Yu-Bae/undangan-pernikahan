@@ -45,10 +45,10 @@ export const weddingConfig: WeddingConfig = {
     },
   },
   event: {
-    date: "2026-10-24",
-    day: "Sabtu",
-    formattedDate: "24 Oktober 2026",
-    time: "09.00 WIB - Selesai",
+    date: "2028-07-24",
+    day: "Senin",
+    formattedDate: "24 Juli 2028",
+    time: "08.00 WIB - Selesai",
     location: {
       name: "Gedung Pernikahan Bahagia",
       address: "Jl. Utama No. 12, Teluk Kuantan",

@@ -31,8 +31,8 @@ export const weddingData: WeddingData = {
     time: "08.00 – 10.00 WIB",
     venue: "Gedung Pernikahan Bahagia",
     city: "Teluk Kuantan",
-    address: "Jl. Utama No. 12, Teluk Kuantan, Kuantan Singingi",
-    googleMapsUrl: "https://maps.google.com",
+    address: "Lokasi: -0.532818, 101.532890, Teluk Kuantan, Kuantan Singingi",
+    googleMapsUrl: "https://www.google.com/maps?q=-0.532818,101.532890",
   },
   resepsi: {
     title: "Resepsi Pernikahan",
@@ -41,8 +41,8 @@ export const weddingData: WeddingData = {
     time: "11.00 – 14.00 WIB",
     venue: "Gedung Pernikahan Bahagia",
     city: "Teluk Kuantan",
-    address: "Jl. Utama No. 12, Teluk Kuantan, Kuantan Singingi",
-    googleMapsUrl: "https://maps.google.com",
+    address: "Lokasi: -0.532818, 101.532890, Teluk Kuantan, Kuantan Singingi",
+    googleMapsUrl: "https://www.google.com/maps?q=-0.532818,101.532890",
   },
   loveStory: [
     {

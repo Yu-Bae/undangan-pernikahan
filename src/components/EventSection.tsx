@@ -90,6 +90,22 @@ export const EventSection: React.FC = () => {
             );
           })}
         </div>
+
+        {/* Embedded Map Section */}
+        <SectionAnimation delay={0.4} className="mt-12 w-full rounded-3xl overflow-hidden border border-[#C5A059]/40 shadow-lg bg-[#FFFFFF] p-3">
+          <div className="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden">
+            <iframe
+              title="Peta Lokasi Pernikahan"
+              src="https://maps.google.com/maps?q=-0.532818,101.532890&z=16&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </SectionAnimation>
       </div>
     </section>
   );

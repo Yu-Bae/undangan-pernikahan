@@ -25,20 +25,23 @@ export const MusicPlayer: React.FC<MusicPlayerProps> = ({ isPlaying, onToggle })
 
   return (
     <div className="fixed bottom-20 md:bottom-6 right-5 z-40">
-      <audio ref={audioRef} src="/music/wedding-song.mp3" loop preload="auto" />
+      <audio ref={audioRef} loop preload="auto">
+        <source src="/music/wedding-song.webm" type="audio/webm" />
+        <source src="/music/wedding-song.mp3" type="audio/mpeg" />
+      </audio>
 
       <button
         type="button"
         onClick={onToggle}
         className={`w-12 h-12 rounded-full border border-[#C5A059]/60 shadow-xl flex items-center justify-center transition-all duration-300 cursor-pointer ${
           isPlaying
-            ? "bg-[#7A5230] text-[#FAF6F0] animate-spin-slow"
+            ? "bg-[#7A5230] text-[#FAF6F0] animate-spin-slow shadow-[#C5A059]/30"
             : "bg-[#FFFFFF] text-[#8C7361] hover:text-[#3D2B1F]"
         }`}
         aria-label={isPlaying ? "Hentikan Musik" : "Putar Musik"}
       >
         {isPlaying ? (
-          <Music className="w-5 h-5 text-[#E5C88B]" />
+          <Music className="w-5 h-5 text-[#E5C88B] animate-pulse" />
         ) : (
           <VolumeX className="w-5 h-5 text-[#8C7361]" />
         )}

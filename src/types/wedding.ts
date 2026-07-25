@@ -59,6 +59,11 @@ export interface WeddingData {
     text: string;
     source: string;
   };
+  audio?: {
+    title?: string;
+    youtubeUrl?: string;
+    src?: string;
+  };
 }
 
 export type AttendanceStatus = "Hadir" | "Tidak Hadir" | "Masih Ragu";

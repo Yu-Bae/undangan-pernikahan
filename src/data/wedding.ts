@@ -4,7 +4,7 @@ export const weddingData: WeddingData = {
   couple: {
     groom: {
       name: "Abiyyu",
-      fullName: "Abiyyu Dzamir Yunas",
+      fullName: "Abiyyu Dzamir Yunas S.Kom",
       parents: "Putra dari Bapak Nama Ayah dan Ibu Nama Ibu",
       instagram: "@i.am_aii",
       instagramUrl: "https://instagram.com/i.am_aii",
@@ -12,7 +12,7 @@ export const weddingData: WeddingData = {
     },
     bride: {
       name: "Alda",
-      fullName: "Kenti Feoni Alda Sari",
+      fullName: "Kenti Feoni Alda Sari S.Pi",
       parents: "Putri dari Bapak Nama Ayah dan Ibu Nama Ibu",
       instagram: "@kentifeoni8",
       instagramUrl: "https://instagram.com/kentifeoni8",

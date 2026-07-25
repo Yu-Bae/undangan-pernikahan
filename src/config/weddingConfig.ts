@@ -50,7 +50,7 @@ export const weddingConfig: WeddingConfig = {
     formattedDate: "24 Juli 2028",
     time: "08.00 WIB - Selesai",
     location: {
-      name: "Gedung Pernikahan Bahagia",
+      name: "Rumah Mempelai Wanita",
       address: "Jl. Utama No. 12, Teluk Kuantan",
       city: "Teluk Kuantan",
     },

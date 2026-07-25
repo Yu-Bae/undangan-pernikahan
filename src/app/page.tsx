@@ -16,7 +16,7 @@ import { WeddingGiftSection } from "@/components/WeddingGiftSection";
 import { RSVPSection } from "@/components/RSVPSection";
 import { WishesSection } from "@/components/WishesSection";
 import { ClosingSection } from "@/components/ClosingSection";
-import { MusicPlayer } from "@/components/MusicPlayer";
+import { MusicPlayer, MusicPlayerRef } from "@/components/MusicPlayer";
 import { MobileNavigation } from "@/components/MobileNavigation";
 
 import { initialWishes } from "@/data/wishes";
@@ -26,6 +26,7 @@ function WeddingAppContent() {
   const [isOpened, setIsOpened] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
   const [wishes, setWishes] = useState<GuestWish[]>(initialWishes);
+  const musicPlayerRef = useRef<MusicPlayerRef>(null);
 
   const searchParams = useSearchParams();
   const rawGuest = searchParams.get("to");
@@ -46,6 +47,11 @@ function WeddingAppContent() {
   const handleOpenInvitation = () => {
     setIsOpened(true);
     setIsPlayingMusic(true);
+    // Directly trigger audio play within user touch event for iOS Safari compatibility
+    setTimeout(() => {
+      musicPlayerRef.current?.playAudio();
+    }, 50);
+    musicPlayerRef.current?.playAudio();
   };
 
   const handleToggleMusic = () => {
@@ -85,7 +91,7 @@ function WeddingAppContent() {
         <ClosingSection />
 
         {/* Floating Controls & Navigation */}
-        <MusicPlayer isPlaying={isPlayingMusic} onToggle={handleToggleMusic} />
+        <MusicPlayer ref={musicPlayerRef} isPlaying={isPlayingMusic} onToggle={handleToggleMusic} />
         <MobileNavigation />
       </motion.div>
     </main>

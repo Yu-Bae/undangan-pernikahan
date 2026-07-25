@@ -8,7 +8,7 @@ export const weddingData: WeddingData = {
       parents: "Putra dari Bapak Nama Ayah dan Ibu Nama Ibu",
       instagram: "@i.am_aii",
       instagramUrl: "https://instagram.com/i.am_aii",
-      image: "/images/groom.jpg",
+      image: "/images/groom.png",
     },
     bride: {
       name: "Alda",

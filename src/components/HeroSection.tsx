@@ -58,30 +58,36 @@ export const HeroSection: React.FC = () => {
 
         {/* Hero Photo Card with Golden Arch Frame */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="relative w-full aspect-[4/5] max-w-xs sm:max-w-sm rounded-t-[140px] rounded-b-3xl p-3 bg-[#FFFFFF] shadow-2xl border border-[#C5A059]/40 my-4"
         >
-          {/* Inner Photo Wrapper */}
-          <div className="relative w-full h-full rounded-t-[130px] rounded-b-2xl overflow-hidden group">
-            <Image
-              src="/images/couple.png"
-              alt={`Foto Pasangan ${weddingData.couple.groom.name} & ${weddingData.couple.bride.name}`}
-              fill
-              priority
-              unoptimized
-              sizes="(max-width: 640px) 100vw, 400px"
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-            />
-            {/* Subtle Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/30 via-transparent to-transparent pointer-events-none" />
-          </div>
+          <motion.div
+            animate={{ y: [-6, 6, -6] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-full h-full relative"
+          >
+            {/* Inner Photo Wrapper */}
+            <div className="relative w-full h-full rounded-t-[130px] rounded-b-2xl overflow-hidden group">
+              <Image
+                src="/images/couple.png"
+                alt={`Foto Pasangan ${weddingData.couple.groom.name} & ${weddingData.couple.bride.name}`}
+                fill
+                priority
+                unoptimized
+                sizes="(max-width: 640px) 100vw, 400px"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              {/* Subtle Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3D2B1F]/30 via-transparent to-transparent pointer-events-none" />
+            </div>
 
-          {/* Floating Heart Badge */}
-          <div className="absolute -bottom-4 right-6 bg-[#FAF6F0] border border-[#C5A059]/50 p-2.5 rounded-full shadow-md text-[#C5A059]">
-            <Heart className="w-5 h-5 fill-[#C5A059]" />
-          </div>
+            {/* Floating Heart Badge */}
+            <div className="absolute -bottom-4 right-6 bg-[#FAF6F0] border border-[#C5A059]/50 p-2.5 rounded-full shadow-md text-[#C5A059]">
+              <Heart className="w-5 h-5 fill-[#C5A059]" />
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

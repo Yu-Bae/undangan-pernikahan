@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { weddingData } from "@/data/wedding";
 import { SectionAnimation } from "./SectionAnimation";
 
@@ -45,7 +46,11 @@ export const CoupleSection: React.FC = () => {
           
           {/* Groom Profile */}
           <SectionAnimation delay={0.2} className="flex flex-col items-center">
-            <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full p-2 bg-gradient-to-tr from-[#C5A059] via-[#E5C88B] to-[#7A5230] shadow-lg mb-6 group">
+            <motion.div
+              animate={{ y: [-4, 4, -4] }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+              className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full p-2 bg-gradient-to-tr from-[#C5A059] via-[#E5C88B] to-[#7A5230] shadow-lg mb-6 group"
+            >
               <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-[#FFFFFF]">
                 <Image
                   src={groom.image}
@@ -56,7 +61,7 @@ export const CoupleSection: React.FC = () => {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-            </div>
+            </motion.div>
 
             <span className="font-script text-xl text-[#C5A059] mb-1">Marapulai</span>
             <h3 className="font-serif text-2xl md:text-3xl text-[#3D2B1F] font-bold">
@@ -79,7 +84,11 @@ export const CoupleSection: React.FC = () => {
 
           {/* Bride Profile */}
           <SectionAnimation delay={0.4} className="flex flex-col items-center">
-            <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full p-2 bg-gradient-to-tr from-[#C5A059] via-[#E5C88B] to-[#7A5230] shadow-lg mb-6 group">
+            <motion.div
+              animate={{ y: [4, -4, 4] }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+              className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full p-2 bg-gradient-to-tr from-[#C5A059] via-[#E5C88B] to-[#7A5230] shadow-lg mb-6 group"
+            >
               <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-[#FFFFFF]">
                 <Image
                   src={bride.image}
@@ -90,7 +99,7 @@ export const CoupleSection: React.FC = () => {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-            </div>
+            </motion.div>
 
             <span className="font-script text-xl text-[#C5A059] mb-1">Anak Daro</span>
             <h3 className="font-serif text-2xl md:text-3xl text-[#3D2B1F] font-bold">

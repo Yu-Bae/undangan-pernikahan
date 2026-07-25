@@ -36,12 +36,12 @@ export const weddingConfig: WeddingConfig = {
     groom: {
       nickname: "Abiyyu",
       fullName: "Abiyyu Dzamir Yunas S.Kom",
-      childOf: "Putra dari Bapak Syafrullah dan Ibu Eka Susanti",
+      childOf: "Putra Pertama dari Bapak Syafrullah dan Ibu Eka Susanti",
     },
     bride: {
       nickname: "Alda",
       fullName: "Kenti Feoni Alda Sari S.Pi",
-      childOf: "Putri dari Bapak Masrikan dan Ibu Miskartini",
+      childOf: "Putri Pertama dari Bapak Masrikan dan Ibu Miskartini",
     },
   },
   event: {
